@@ -1,0 +1,87 @@
+[
+  {
+    "name" : "triple burger",
+    "price" : 0.40,
+    "image" : "triple-burger.jpg",
+    "type" : "burgers",
+    "type2" : "meat"
+    
+  },
+  {
+    "name" : "juicy buns",
+    "price" : 1.99,
+    "image" : "juicy-buns.jpg",
+    "type" : "burgers",
+    "type2" : "meat"
+  },
+  {
+    "name" : "vegan burger",
+    "price" : 2.85,
+    "image" : "vegan-burger.jpg",
+    "type" : "burgers",
+    "type2" : "vegan"
+  },
+  {
+    "name" : "green burger",
+    "price" : 0.99,
+    "image" : "green-burger.jpg",
+    "type" : "burgers",
+    "type2" : "vegan"
+  },
+  {
+    "name" : "chicken pizza",
+    "price" : 0.58,
+    "image" : "chicken-pizza.jpg",
+    "type" : "pizza",
+    "type2" : "meat"
+  },
+  {
+    "name" : "ham pizza",
+    "price" : 0.52,
+    "image" : "ham-pizza.jpg",
+    "type" : "pizza",
+    "type2" : "meat"
+  },
+  {
+    "name" : "vegan pizza",
+    "price" : 0.58,
+    "image" : "vegan-pizza.jpg",
+    "type" : "pizza"
+    ,"type2" : "vegan"
+  },
+  {
+    "name" : "bazilik pizza",
+    "price" : 2.39,
+    "image" : "bazilik-pizza.jpg",
+    "type" : "pizza",
+    "type2" : "vegan"
+  },
+  {
+    "name" : "japan set",
+    "price" : 1.40,
+    "image" : "japan-set.jpg",
+    "type" : "sushi",
+    "type2" : "meat"
+  },
+  {
+    "name" : "semga set",
+    "price" : 0.45,
+    "image" : "semga-set.jpg",
+    "type" : "sushi",
+    "type2" : "meat"
+  },
+  {
+    "name" : "vegan set",
+    "price" : 1.89,
+    "image" : "vegan-set.jpg",
+    "type" : "sushi",
+    "type2" : "vegan"
+  },
+  {
+    "name" : "cabbage set",
+    "price" : 1.49,
+    "image" : "cabbage-set.jpg",
+    "type" : "sushi",
+    "type2" : "vegan"
+  }
+]
