@@ -12,6 +12,7 @@ fetch("products.json").then(function(response){
 	if(response.ok){
 		response.json().then(function(json){
 			products = json;
+			
 			main();
 		});
 	}else{
@@ -27,23 +28,25 @@ function main(){
 	//Выпадающий список с категориями, поисковая строка, кнопка, основное поле для контента
 	var type = document.querySelector("#type");
 	var type2 = document.querySelector("#filling");
-	var search = document.querySelector("#search");
-	var searchBtn = document.querySelector("#button");
-	var main = document.querySelector("main");
+	var search = document.querySelector("#search-product");
+	var searchBtn = document.querySelector("#filter-btn");
+	var main = document.querySelector(".product-list");
 
-
+	products.slice(1, 4);
  	//Для удобства поместили список продуктов в переменную final: она как финальный набор продуктов для отображения
  	//Помещаем продукты в final и вызываем функцию updateDisplay() чтобы изначально вывести все продукты
 
  	var lastType = type.value;
  	var lastSearch = "";
 
- 	var categoryProducts
+ 	var categoryProducts;
+ 	var categoryFilling;
 	var finalProducts = products;
 	updateDisplay();
 
 
 	categoryProducts = [];
+	categoryFilling = [];
 	finalProducts =[];
 	
 	//Функция для обновления содержимого на странице
@@ -60,7 +63,7 @@ function main(){
 			para.textContent = "No results";
 			main.appendChild(para);
 		}else{
-			for(var i = 0; i < finalProducts.length; i++){
+			for(var i = 0; i < finalProducts.length; i++){			
 				blob(finalProducts[i]);
 			}
 		}
@@ -69,7 +72,7 @@ function main(){
 	//Функция нужна для фетч запроса к картинкам товаров.
 	function blob(product) {
 		//В url присваиваем адрес картинок
-		var url = "images/" + product.image;
+		var url = "products/" + product.image;
 		//Фетч запрос
 		fetch(url).then(function(response){
 			//В случае удачного запроса создаем URL объект ( создаем адрес картинки чтобы потом этот адрес присвоить атрибуту src для изображения)
@@ -90,14 +93,24 @@ function main(){
 	function show(objectURL, product){
 		var section = document.createElement("div");
 		section.setAttribute("class", "product " + product.type);
-		var p = document.createElement("p");
+
+		var productName = document.createElement("p");
+		productName.setAttribute("class", "produc-name");
+
+		var productPrice = document.createElement("p");
+		productPrice.setAttribute("class", "product-price");
+
 		var img = document.createElement("img");
-		p.textContent = product.name;
+		img.setAttribute("class", "produc-img");
+		
+		productName.textContent = product.name;
+		productPrice.textContent = "$ " + product.price.toFixed(2);
 		img.src = objectURL;
 
 		main.appendChild(section);
-		section.appendChild(p);
+		section.appendChild(productName);
 		section.appendChild(img)
+		section.appendChild(productPrice)
 
 
 	}
@@ -114,54 +127,66 @@ function main(){
     	categoryProducts = [];
 		finalProducts = [];
 
-		if(type.value === lastType && search.value.trim() === lastSearch) {
-      		return;
-    	} else{
-    		lastType = type.value;
-    		lastSearch = search.value.trim();
+		
 
     		if(type.value === "All"){
 				categoryProducts = products;
-				searching();
+				filling();
 			}else{
 				var typeLowerCase = type.value.toLowerCase();
-				var type2LowerCase = type2.value.toLowerCase();
+				
 				for(let i = 0; i < products.length; i++){
 
 					if(products[i].type === typeLowerCase){
 						categoryProducts.push(products[i]);
+						
 					}
 				}
+			
 
-						
 
-					
-						
-					
 
-			searching();
+				filling();
 
-		}			
+			}			
 
-    	}
+    	
 		
+	}
 
+	function filling() {
+		categoryFilling = [];
 
+		if(type2.value === "All"){
+			categoryFilling = categoryProducts;
+			
+		}else{
+			var type2LowerCase = type2.value.toLowerCase();
+				
+			for(let i = 0; i < categoryProducts.length; i++){
+				if(categoryProducts[i].type2 === type2LowerCase){
+					categoryFilling.push(categoryProducts[i]);
+				}
+			}
+			
+		}
+		searching();
+		
 		
 	}
 
 	function searching(){
 
 		if(search.value.trim() === ""){
-			finalProducts = categoryProducts;
+			finalProducts = categoryFilling;
 			updateDisplay();
 		}else{
 
 			searchLowerCase = search.value.trim().toLowerCase();
 
-			for(let i = 0; i < categoryProducts.length; i++){
-				if(categoryProducts[i].name.indexOf(searchLowerCase) !== -1){
-					finalProducts.push(categoryProducts[i])
+			for(let i = 0; i < categoryFilling.length; i++){
+				if(categoryFilling[i].name.indexOf(searchLowerCase) !== -1){
+					finalProducts.push(categoryFilling[i])
 
 				}
 			}
@@ -170,6 +195,12 @@ function main(){
 		}
 
 	}
+
+	function spl(finalProducts) {
+		finalProducts.splice(1, 6);
+		console.log(finalProducts.length);
+	}
+	spl(finalProducts);
 
 
 }

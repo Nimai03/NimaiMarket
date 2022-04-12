@@ -19,14 +19,14 @@
     "price" : 2.85,
     "image" : "vegan-burger.jpg",
     "type" : "burgers",
-    "type2" : "vegan"
+    "type2" : "meat"
   },
   {
-    "name" : "green burger",
+    "name" : "rotten burger",
     "price" : 0.99,
     "image" : "green-burger.jpg",
     "type" : "burgers",
-    "type2" : "vegan"
+    "type2" : "meat"
   },
   {
     "name" : "chicken pizza",

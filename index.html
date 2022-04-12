@@ -1,60 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimpleMarket</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="i.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Market</title>
+	<link rel="stylesheet" href="style/style.css">
+
+	<script src="https://use.fontawesome.com/753fb65ead.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header shapka">
-            <h1>SimpleMarket!</h1>
-            <p>Here you can buy pizza, sushi or burgers!</p>
-        </header>
 
-        <section>
-            <aside>
-                <form action="">
-                    <div>
-                        <label for="type">Product type</label>
-                        <select id="type">
-                            <option selected>All</option>
-                            <option>Burgers</option>
-                            <option>Pizza</option>
-                            <option>Sushi</option>
-                            <option>Hhee</option>
-                        </select>
-                    </div>
-                     <div>
-                        <label for="filling">Meat/Vegan</label>
-                        <select id="filling">
-                            <option selected>All</option>
-                            <option>Meat</option>
-                            <option>Vegan</option>
-                            
-                        </select>
-                    </div>
-                    <div>
-                        <label for="search">Search</label>
-                        <input type="text" id="search" placeholder="search...">
-                    </div>
-                    <div>
-                        <button id="button">Filter results</button>
-                    </div>
-                </form>
-            </aside>
-            <main>
-                
-            </main>
-        </section>
-        <footer>
-            <p>made by ME</p>
-        </footer>
-    </div>
-    <script src="main.js">
-        
-    </script>
+<header>
+	<div class="container">
+		<div class="top-header">
+			<div class="logo">
+				<a href="index.html"><img src="logo.png" alt=""></a>
+			</div>
+			<div class="contacts">
+				<div class="vk">
+					<a href="#"><i class= "fa fa-vk" aria-hidden="true"></i></a>
+				</div>
+				<div class="tg">
+					<a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="container">
+		<div class="main-inner">
+			<div class="filters">
+				<div class="fi">
+				<div class="product-type">
+					<label for="type">Type</label>
+					<select name="type" id="type">
+						<option selected>All</option>
+						<option>Burgers</option>
+						<option>Pizza</option>
+						<option>Sushi</option>
+					</select>
+				</div>
+				<div class="product-category">
+					<label for="filling">Category</label>
+					<select name="filling" id="filling">
+						<option selected>All</option>
+						<option>Meat</option>
+						<option>Vegan</option>
+					</select>
+				</div>
+
+				<div class="searching">
+					<input id="search-product" type="text" placeholder="Search...">
+				</div>
+				<div class="filter-btn">
+					<button id="filter-btn">Filter</button>
+				</div>
+				</div>
+			</div>
+
+			<div class="products">
+				<div class="products-top">
+					<div class="plus"><i class="fa fa-plus" aria-hidden="true"></i> </div>
+					<div class="heart"><i class="fa fa-heart" aria-hidden="true"></i></div>
+				</div>
+
+				<div class="product-list">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+
+	<script src="main.js">
+		
+	</script>
 </body>
 </html>
+
+<!-- 
+<i class="fa fa-plus" aria-hidden="true"></i> 
+
+<i class="fa fa-heart" aria-hidden="true"></i>
+
+-->
