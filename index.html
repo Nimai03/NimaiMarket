@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Market</title>
+	<link rel="stylesheet" href="style/style.css">
+	<!--ICONS-->
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</head>
+<body>
+<header>
+	<div class="container">
+		<div class="header-inner">
+			<div class="logo">
+				<a href="#"><img src="LOGO.png" alt=""></a>
+			</div>
+
+			<div class="contacts">
+				<a class="vk" href="#"><span class="iconify" data-icon="akar-icons:vk-fill"></span></a>
+				<a class="tg" href="#"><span class="iconify" data-icon="bxl:telegram"></span></a>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="filters">
+	<div class="container">
+		<form class="filters-inner">
+			<select name="category" id="category">
+				<option selected="">Category</option>
+				<option>Burgers</option>
+				<option>Pizza</option>
+				<option>Sushi</option>
+			</select>
+
+			<select name="type" id="type">
+				<option selected="">Type</option>
+				<option>Meat</option>
+				<option>Vegan</option>
+			</select>
+
+			<input id="searching" placeholder="Search..." type="text">
+
+			<button id="filter-btn">Filter</button>
+		</form>
+	</div>
+</div>
+
+<div class="main">
+	<div class="container">
+		<div class="main-top">
+			<span class="iconify add" data-icon="akar-icons:plus"></span>
+		</div>
+		<div class="main-body">
+			
+		</div>
+	</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

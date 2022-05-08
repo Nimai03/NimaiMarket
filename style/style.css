@@ -1,0 +1,134 @@
+/*Нормалайз*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.container{
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+/*Шапка*/
+header{
+	background: #c50000;
+	padding: 5px 0;
+	margin-bottom: 30px;
+}
+
+.header-inner{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.contacts a{
+	font-size: 25px;
+	margin-right: 20px;
+
+	transition: .2s;
+}
+.contacts a:last-child{
+	margin: 0;
+}
+
+.contacts a:hover{
+	color: #c4c4c4;
+}
+
+/*Фильтры*/
+.filters{
+	margin-bottom: 30px;
+}
+
+.filters-inner{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+
+}
+
+
+#category, #type, #searching{
+	font-size: 16px;
+	color: #c50000;
+	padding: 6px;
+
+	border-radius: 5px;
+	border: 1px solid #c50000;
+
+}
+
+#category, #type{
+	width: 100px;
+}
+
+#searching{
+	width: 200px;
+
+}
+
+#filter-btn{
+	background: #c50000;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	padding: 0 15px;
+	transition: .2s;
+	text-transform: uppercase;
+	border-radius: 5px;
+	
+
+}
+#filter-btn:hover{
+	background: #900000;
+}
+/*Основное*/
+.main-top{
+	background: #c50000;
+	padding: 5px;
+}
+
+.add{
+	font-size: 25px;
+	color: #fff;
+
+	transition: .2s;
+}
+
+.add:hover{
+	color: #c4c4c4;
+}
+/*=======================*/
+.main-body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+img{
+	width: 250px;
+}
+
+
+
+
+
+
+
+/*font-family: 'Roboto', sans-serif;*/
